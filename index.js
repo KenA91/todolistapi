@@ -2,17 +2,18 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var _ = require('underscore');
 var db = require('./db.js');
+const FLUSH_DB = false; //set true to drop & create new tables
 
 var app = express();
 var PORT = 3333;
 
+
+//EXPRESS
 app.use(bodyParser.json()); // bodyparser-middleware, requests are converted to json-objects and stored in req.body
 
 
-
-
 //Start DB-Sync and HTTP-Server
-db.sequelize.sync()
+db.sequelize.sync({force: FLUSH_DB})
     .then(function () {
         console.log("Database Sync OK!");
         //start HTTP-Server

@@ -13,7 +13,28 @@ sequelize.authenticate()
 
 
 var db = {};
+db.TodoList = sequelize.define('TodoList',
+    {
+        TodoListName:
+            {
+                type: Sequelize.STRING
+            }
+    });
+db.TodoItem = sequelize.define('TodoItem',
+    {
+        TodoItemName:
+            {
+                type: Sequelize.STRING
+            },
+        TodoItemState:
+            {
+                type: Sequelize.BOOLEAN
+            }
+    });
+db.TodoItem.belongsTo(db.TodoList); // create foreign key TodoListId in TodoItem
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
+
+
 
 module.exports = db;
