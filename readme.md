@@ -2,21 +2,21 @@
 ## API Calls 
 ```
 GET	/list/all			Get all Lists (Names & Ids)
-GET	/list/%list_id%		Get all Items of a List (Names, Status, & IDs)
-GET	/item/%item_id%		Get specific Item
+GET	/list/:list_id		Get all Items of a List (Names, Status, & IDs)
+GET	/item/:item_id		Get specific Item
 
-POST	/list			Create new List
-POST	/item			Create new Item
+POST	/list			    Create new List
+POST	/item/list_id:		Create new Item on a List
 	
-PUT	/item/%item_id%		Change Item (Name/Status)	
-PUT	/list/%list_id%		Change List (Name)
+PUT	/item/:item_id		Change Item (Name/Status)	
+PUT	/list/:list_id		Change List (Name)
 
-DELETE	/list/%list_id%		Delete List (and all Items)
-DELETE	/item/%item_id%		Delete single Item
+DELETE	/list/:list_id	Delete List (and all Items)
+DELETE	/item/:item_id 	Delete single Item
 ```
 ### HTTP-Responses
 ```
-200 OK 			Everything went as expected
+200 OK 			    Everything went as expected
 400 BAD REQUEST 	Malformed Request (e.g. Name empty/missing)
 404 NOT FOUND		Resource not found (List/Item)
 ``` 
@@ -24,12 +24,12 @@ DELETE	/item/%item_id%		Delete single Item
 ## Data Models
 ### TodoList
 ```
-TodoListID	int	
+TodoListID      int	
 TodoListName	string
 ```
 ### TodoItem 
 ``` 
-TodoItemId	int
+TodoItemId	    int
 TodoItemName	string
 TodoItemState	boolean
 ```
