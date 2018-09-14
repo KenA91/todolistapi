@@ -1,7 +1,7 @@
 # ToDoAPI 
 ## API Calls 
 ```
-GET	/list/all		Get all Lists (Names & Ids)
+GET	/list/all			Get all Lists (Names & Ids)
 GET	/list/%list_id%		Get all Items of a List (Names, Status, & IDs)
 GET	/item/%item_id%		Get specific Item
 
@@ -14,7 +14,7 @@ PUT	/list/%list_id%		Change List (Name)
 DELETE	/list/%list_id%		Delete List (and all Items)
 DELETE	/item/%item_id%		Delete single Item
 ```
-### Responses
+### HTTP-Responses
 ```
 200 OK 			Everything went as expected
 400 BAD REQUEST 	Malformed Request (e.g. Name empty/missing)
