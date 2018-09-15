@@ -1,7 +1,8 @@
 var pgcred = require('./postgres_credentials.js');
 
 var Sequelize = require('sequelize');
-const sequelize = new Sequelize('postgres://'+pgcred.username+':'+pgcred.password +'@'+pgcred.host+':'+pgcred.port+'/'+pgcred.database);
+const sequelize = new Sequelize('postgres://'+pgcred.username+':'+pgcred.password +'@'+pgcred.host+':'+pgcred.port+'/'+pgcred.database,
+    {logging: false});
 
 sequelize.authenticate()
     .then(() => {
