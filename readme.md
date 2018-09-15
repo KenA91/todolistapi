@@ -1,6 +1,5 @@
 # ToDoAPI 
 A simple RESTful ToDo-List API using Node.js, Express, Sequelize and PostgreSQL.
-
 ## API Calls 
 ```
 GET	/list/all			Get all Lists
