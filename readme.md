@@ -1,5 +1,5 @@
 # ToDoAPI 
-A simple ToDo-List API.
+A simple RESTful ToDo-List API using Node.js, Express, Sequelize and PostgreSQL.
 ## API Calls 
 ```
 GET	/list/all			Get all Lists
@@ -7,8 +7,8 @@ GET	/list/:list_id		Get specific List
 GET	/list/:list_id/all	Get specific List with all Items
 GET	/item/:item_id		Get specific Item
 
-POST	/list			    Create new List
-POST	/item/          	Create new Item on a List
+POST	/list/		    Create new List
+POST	/item/          Create new Item on a List
 	
 PUT	/item/:item_id		Change Item's Status (checked/unchecked)
 
