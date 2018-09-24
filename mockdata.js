@@ -9,7 +9,7 @@ db.sequelize.sync({force: true})
         console.log("Database Sync OK!");
 
         db.TodoList.bulkCreate([
-                {TodoListName: "Grocieries"}, // 1
+                {TodoListName: "Groceries"}, // 1
                 {TodoListName: "Wishlist"}, // 2
                 {TodoListName: "Sarah's Wedding"}, // 3
                 {TodoListName: "Shopping"} // 4
